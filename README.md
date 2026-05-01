@@ -70,5 +70,5 @@ graph TD
 |<img width="484" height="867" alt="image" src="https://github.com/user-attachments/assets/d5a000a5-27fc-4876-819d-ab42c4c90152" /> | <img width="490" height="870" alt="image" src="https://github.com/user-attachments/assets/bae5acb1-91f5-45b8-b2f5-99dad0b40b66" /> |
 
 ## Video Demo
-Video demo fitur aplikasi dapat diakses melalui tautan berikut : 
+Video demo fitur aplikasi dapat diakses melalui tautan berikut : https://youtube.com/shorts/Eypx0dphVhA?si=yh4oL_Qskx9HwC2l
 ---
