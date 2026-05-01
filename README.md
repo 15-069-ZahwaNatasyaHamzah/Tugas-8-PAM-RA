@@ -1,19 +1,19 @@
-# NoteApp - Tugas 8 PAM (Platform Features & DI)
+# MyProfile & Notes App - Kotlin Multiplatform
 
-A modern, cross-platform Note-Taking application built with **Compose Multiplatform**, upgraded with Dependency Injection and Platform-specific features.
+Aplikasi manajemen catatan (Notes App) ini merupakan pengembangan lanjutan berbasis **Compose Multiplatform** yang kini mengimplementasikan **Dependency Injection menggunakan Koin** untuk mengelola seluruh dependensi aplikasi secara terstruktur. Aplikasi tetap menggunakan **SQLDelight** dengan pendekatan *offline-first* serta mendukung fitur utama seperti **CRUD**, **pencarian**, dan **pengaturan** dengan **DataStore**. Selain itu, ditambahkan fitur **Device Info** dan **Network Monitor** berbasis *expect/actual* untuk mendukung multiplatform, yang ditampilkan pada halaman Settings dan indikator status jaringan di halaman utama. Dengan arsitektur **MVVM** dan pengelolaan **UI state** yang baik, aplikasi menjadi lebih modular, responsif, dan siap digunakan di berbagai platform.
 
-## 🚀 Upgrade Features (Task 8)
+## Fitur
 
-1.  **Koin Dependency Injection**: Full app migration to Koin DI. All components (Repository, ViewModels, Platform Services) are now managed and injected through Koin.
-2.  **Platform DeviceInfo**: Implementation of `DeviceInfo` using `expect`/`actual` to retrieve device name, OS, and version across Android, iOS, JVM, and Web.
-3.  **Real-time NetworkMonitor**: Implementation of `NetworkMonitor` using `expect`/`actual` to track internet connectivity status.
-4.  **Settings Integration**: Device information is dynamically displayed on the Profile/Settings screen.
-5.  **Network Status Indicator**: A prominent "Offline Mode" indicator appears on the main screen when the device loses connection.
-6.  **Koin-injected ViewModels**: ViewModels are provided using `koinViewModel()` from the `io.insert-koin:koin-compose-viewmodel` library.
+1. **Dependency Injection Koin**: Seluruh aplikasi telah dimigrasikan menggunakan Koin untuk Dependency Injection. Semua komponen (Repository, ViewModel, dan layanan platform) kini dikelola dan di-*inject* melalui Koin.
+2. **DeviceInfo Multiplatform**: Implementasi `DeviceInfo` menggunakan `expect/actual` untuk mendapatkan informasi perangkat seperti nama device, sistem operasi, dan versi pada Android, iOS, JVM, dan Web.
+3. **NetworkMonitor Real-time**: Implementasi `NetworkMonitor` menggunakan `expect/actual` untuk memantau status koneksi internet secara real-time.
+4. **Integrasi Settings**: Informasi perangkat ditampilkan secara dinamis pada halaman Profile/Settings.
+5. **Indikator Status Jaringan**: Indikator "Mode Offline" akan muncul di halaman utama ketika perangkat kehilangan koneksi internet.
+6. **ViewModel dengan Koin**: ViewModel disediakan menggunakan `koinViewModel()` dari library `io.insert-koin:koin-compose-viewmodel`.
 
-## 🏗️ Architecture Diagram
+## Architecture Diagram
 
-The application uses a Clean Architecture approach with Koin as the central Dependency Injection container.
+Aplikasi ini menggunakan pendekatan Arsitektur Bersih dengan Koin sebagai kontainer Injeksi Ketergantungan utama.
 
 ```mermaid
 graph TD
@@ -48,32 +48,27 @@ graph TD
     Koin --> NetworkMonitor
 ```
 
-## 📸 Screenshots
-
-| Device Info (Settings) | Network Indicator (Offline) |
-| :---: | :---: |
-| ![Device Info](screenshots/device_info.png) | ![Network Indicator](screenshots/network_indicator.png) |
-
-## 🎥 Video Demo
-A 45-second demo video showing Koin DI initialization, Device Info display, and real-time Network Status (On/Off) transitions can be found here:
-**[Link to Video Demo](video/demo.mp4)**
-
----
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 -   **UI Framework**: [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
 -   **Dependency Injection**: [Koin 4.0.0](https://insert-koin.io/)
 -   **Database**: [SQLDelight](https://cashapp.github.io/sqldelight/)
 -   **Navigation**: [Jetpack Navigation Compose](https://developer.android.com/jetpack/compose/navigation)
 
-## 🏗️ Getting Started
+## Cara Menjalankan Project
 
-### Prerequisites
-- Android Studio Ladybug or later.
-- JDK 17 or later.
+1. **Persiapan Resource**: Pastikan file `profile_user.png` berada di folder `composeApp/src/commonMain/composeResources/drawable/`.
+2. **Sync Project**: Lakukan *Gradle Sync* di Android Studio.
+3. **Run**:
+   - Untuk Android: Pilih modul `composeApp` lalu klik **Run**.
+   - Untuk Desktop: Jalankan perintah `./gradlew :composeApp:run` di terminal.
 
-### Running the App
-- **Android**: Select `composeApp` and run on an emulator or device.
-- **Desktop**: Run `./gradlew :composeApp:run`.
-- **Web**: Run `./gradlew :composeApp:jsBrowserDevelopmentRun`.
+## Dokumentasi Visual
+
+| Device Info (Settings) | Network Indicator (Offline) |
+| :---: | :---: |
+|<img width="484" height="867" alt="image" src="https://github.com/user-attachments/assets/d5a000a5-27fc-4876-819d-ab42c4c90152" /> | <img width="490" height="870" alt="image" src="https://github.com/user-attachments/assets/bae5acb1-91f5-45b8-b2f5-99dad0b40b66" /> |
+
+## Video Demo
+Video demo fitur aplikasi dapat diakses melalui tautan berikut : 
+---
