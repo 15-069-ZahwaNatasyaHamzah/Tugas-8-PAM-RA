@@ -71,4 +71,5 @@ graph TD
 
 ## Video Demo
 Video demo fitur aplikasi dapat diakses melalui tautan berikut : https://youtube.com/shorts/Eypx0dphVhA?si=yh4oL_Qskx9HwC2l
+
 ---
